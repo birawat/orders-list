@@ -36,10 +36,7 @@
                 </tbody>
                 
               </table>
-              <p>
-  <button @click="prevPage">Previous</button> 
-  <button @click="nextPage">Next</button>
-  </p></b-tab>
+              </b-tab>
           </div>
         </div>
         <b-tab title="Active orders"><p>Active orders</p></b-tab>
@@ -91,21 +88,6 @@ export default {
       });
     },
   },
-  nextPage:function() {
-      if((this.currentPage*this.pageSize) < this.users.length) this.currentPage++;
-    },
-  prevPage:function() {
-      if(this.currentPage > 1) this.currentPage--;
-    },
-    computed:{
-    users:function() {
-        filters ((index) => {
-        let start = (this.currentPage-1)*this.pageSize;
-        let end = this.currentPage*this.pageSize;
-        if(index >= start && index < end) return true;
-      });
-    }
-  }
 }
 </script>
 
