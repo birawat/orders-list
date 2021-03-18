@@ -1,4 +1,4 @@
-# youtubesidebar
+#vue-sidebar
 
 ## Project setup
 ```
